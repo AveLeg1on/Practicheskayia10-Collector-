@@ -1,0 +1,38 @@
+﻿<Window x:Class="Collector.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Collector"
+        mc:Ignorable="d"
+      Title="Коллектор" FontFamily="Showcard Gothic" ResizeMode="NoResize" Top="0" Left="0" Height="600"  Width="800" FontSize="14">
+    <Grid  Margin="0,0,0,-6">
+        <Menu VerticalAlignment="Top" HorizontalAlignment="Center">
+            <MenuItem Header="Опции">
+                <MenuItem Header="Заполнить таблицу" Click="CreateNumAndViewNum_Click"></MenuItem>
+                <MenuItem Header="Получить ответ" Click="Answer_Click"></MenuItem>
+            </MenuItem>
+            <MenuItem Header="Очистка" Click="Clear"></MenuItem>
+            <MenuItem Header="Задание" Click="Task"></MenuItem>
+            <MenuItem   Header="Выход" Click="Close"></MenuItem>
+        </Menu>
+        <TextBox Name="WWUser" HorizontalAlignment="Left" Margin="546,358,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
+
+        <DataGrid  AutoGenerateColumns="True"   Name="DGeshka" Margin="0,45,0,321" RenderTransformOrigin="0.5,0.5">
+            <DataGrid.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleX="-0.924"/>
+                    <RotateTransform/>
+                    <TranslateTransform X="-1.863"/>
+                </TransformGroup>
+            </DataGrid.RenderTransform>
+
+
+        </DataGrid>
+        <Label Name="FinalValues" HorizontalAlignment="Left" Margin="333,269,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.039,0.637"/>
+        <TextBlock FontSize="18" FontFamily="Bookman old Style" HorizontalAlignment="Left" Margin="199,356,0,0" TextWrapping="Wrap" Text="Введите разрядность таблицы" VerticalAlignment="Top"/>
+
+
+    </Grid>
+</Window>
